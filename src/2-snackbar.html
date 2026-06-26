@@ -3,30 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Snackbar</title>
+    <title>Promise Generator · HW-02</title>
     <link rel="stylesheet" href="./css/2-snackbar.css" />
     <script type="module" src="./js/2-snackbar.js"></script>
   </head>
   <body>
-    <form class="form">
-      <label class="form-lable-ms">
-        Delay (ms)
-        <input type="number" name="delay" required />
-      </label>
+    <div class="page">
+      <a class="back-link" href="./">← Back</a>
+      <div class="card">
+        <h1 class="card-title">Promise Generator</h1>
+        <p class="card-sub">Create a promise with a custom delay and state</p>
 
-      <fieldset>
-        <legend>State</legend>
-        <label>
-          <input type="radio" name="state" value="fulfilled" required />
-          Fulfilled
-        </label>
-        <label>
-          <input type="radio" name="state" value="rejected" required />
-          Rejected
-        </label>
-      </fieldset>
+        <form class="form">
+          <label class="field-label">
+            Delay (ms)
+            <input class="field-input" type="number" name="delay" placeholder="e.g. 2000" required />
+          </label>
 
-      <button type="submit">Create notification</button>
-    </form>
+          <fieldset class="radio-group">
+            <legend class="radio-legend">State</legend>
+            <label class="radio-label">
+              <input type="radio" name="state" value="fulfilled" required />
+              <span class="radio-custom"></span>
+              <span class="radio-text fulfilled">Fulfilled</span>
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="state" value="rejected" required />
+              <span class="radio-custom"></span>
+              <span class="radio-text rejected">Rejected</span>
+            </label>
+          </fieldset>
+
+          <button class="submit-btn" type="submit">Create notification</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
